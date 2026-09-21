@@ -1,0 +1,23 @@
+@use 'sass:color';
+
+$Blue-100: hsl(225, 100%, 94%);
+$Blue-700: hsl(245, 75%, 52%);
+$Blue-50: hsl(225, 100%, 98%);
+$Gray-600: hsl(224, 23%, 55%);
+$Blue-950: hsl(223, 47%, 23%);
+$card-bg: white;
+$btn-hover: color.change($Blue-700, $alpha: 0.7);
+$btn-shadow: color.change($Blue-700, $alpha: 0.2);
+$card-shadow: color.change($Gray-600, $alpha: 0.2);
+
+// background image
+$desktop-bg:url(../images/pattern-background-desktop.svg);
+$mobile-bg:url(../images/pattern-background-mobile.svg);
+
+//fonts
+
+$card-font-family: "Red Hat Display", sans-serif;
+
+$card-medium: 500;
+$card-bold: 700;
+$card-black: 900;

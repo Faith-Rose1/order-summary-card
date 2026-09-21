@@ -38,7 +38,7 @@ body {
   background-image: url(../images/pattern-background-mobile.svg);
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position: 50% -35%;
+  background-position: 50% top;
 }
 @media (min-width: 37.5rem) {
   body {

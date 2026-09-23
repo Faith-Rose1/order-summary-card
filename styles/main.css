@@ -164,4 +164,16 @@ body {
 }
 .card__cancel-btn:hover {
   color: hsl(223, 47%, 23%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::after, *::before {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -4,6 +4,6 @@
   @if math.is-unitless($pixel) {
     @return math.div($pixel, 16) * 1rem;
   } @else {
-    @return math.div($pixel, 16px) * 1rem
+    @return math.div($pixel, 16px) * 1rem;
   }
 }

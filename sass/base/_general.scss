@@ -1,6 +1,6 @@
-@use 'variables';
+@use '../abstracts/variables' as v;
 
-@use 'codes';
+@use '../abstracts/codes' as c;
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -9,15 +9,15 @@
 }
 
 body {
-  background-color: variables.$Blue-100;
+  background-color: v.$Blue-100;
   min-block-size: 100vh;
-  @include codes.flex;
-  background-image: variables.$mobile-bg;
+  @include c.flex;
+  background-image: v.$mobile-bg;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: 50% top;
 
   @media (min-width: 37.5rem) {
-    background-image: variables.$desktop-bg;
+    background-image: v.$desktop-bg;
   }
 }

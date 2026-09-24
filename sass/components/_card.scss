@@ -1,19 +1,19 @@
-@use 'functions' as *;
+@use '../abstracts/functions' as *;
 
-@use 'codes';
+@use '../abstracts/codes' as c;
 
-@use 'variables';
+@use '../abstracts/variables' as v;
 
 .card {
   inline-size: 100%;
   max-inline-size: clamp(20.3438rem, 17.5489rem + 11.9249vw, 28.2812rem);
   overflow: hidden;
   border-radius: rem(20px);
-  background-color: variables.$card-bg;
-  font-family: variables.$card-font-family;
-  color: variables.$Gray-600;
-  font-weight: variables.$card-bold;
-  box-shadow: 0 rem(20px) rem(15px) variables.$card-shadow;
+  background-color: v.$card-bg;
+  font-family: v.$card-font-family;
+  color: v.$Gray-600;
+  font-weight: v.$card-bold;
+  box-shadow: 0 rem(20px) rem(15px) v.$card-shadow;
 
 
   & > img {
@@ -24,7 +24,7 @@
   }
 
   &__content {
-    @include codes.flex($items: stretch);
+    @include c.flex($items: stretch);
     padding-inline: clamp(1.4375rem, 0.8653rem + 2.4413vw, 3.0625rem);
 
     padding-block: clamp(2.1875rem, 1.9674rem + 0.939vw, 2.8125rem);
@@ -38,8 +38,8 @@
     h1 {
       font-size: clamp(1.3625rem, 1.2261rem + 0.5822vw, 1.75rem);
       margin-block-end: rem(15px);
-      color: variables.$Blue-950;
-      font-weight: variables.$card-black;
+      color: v.$Blue-950;
+      font-weight: v.$card-black;
     }
     
     p {
@@ -58,73 +58,73 @@
   }
 
   button:focus-visible {
-    outline: rem(1px) solid variables.$Gray-600;
+    outline: rem(1px) solid v.$Gray-600;
   }
 
   &__annual-plan {
-    @include codes.flex($dir:row, $content: space-between);
+    @include c.flex($dir:row, $content: space-between);
     padding-inline: clamp(0.9375rem, 0.7174rem + 0.939vw, 1.5625rem);
     padding-block: clamp(1.25rem, 1.14rem + 0.4695vw, 1.5625rem);
-    background-color: variables.$Blue-50;
+    background-color: v.$Blue-50;
     border-radius: rem(10px);
     margin-block-end: clamp(1.375rem, 1.1989rem + 0.7512vw, 1.875rem);
 
     button {
       border: none;
       background-color: transparent;
-      color: variables.$Blue-700;
+      color: v.$Blue-700;
       text-decoration: underline;
-      font-weight: variables.$card-bold;
+      font-weight: v.$card-bold;
       font-size: clamp(0.8125rem, 0.7905rem + 0.0939vw, 0.875rem);
 
       &:hover {
-        color: variables.$btn-hover;
+        color: v.$btn-hover;
         text-decoration: none;
       }
     }
   }
 
   &__plan {
-    @include codes.flex($dir:row);
+    @include c.flex($dir:row);
     gap: clamp(1.1875rem, 1.3565rem - 0.1878vw, 1.3125rem);
     font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
   }
 
   &__plan-amount {
-    @include codes.flex($items: flex-start);
+    @include c.flex($items: flex-start);
     gap: rem(4px);
 
     p {
-      color: variables.$Blue-950;
-      font-weight: variables.$card-black;
+      color: v.$Blue-950;
+      font-weight: v.$card-black;
     }
   }
 
   &__proceed-btn {
-    background-color: variables.$Blue-700;
-    color: variables.$Blue-50;
+    background-color: v.$Blue-700;
+    color: v.$Blue-50;
     padding-block: clamp(0.9375rem, 0.8935rem + 0.1878vw, 1.0625rem);
     border: none;
     border-radius: rem(10px);
     font-size: rem(15.5px);
-    font-weight: variables.$card-bold;
-    box-shadow: 0 rem(20px) rem(17px) variables.$btn-shadow;
+    font-weight: v.$card-bold;
+    box-shadow: 0 rem(20px) rem(17px) v.$btn-shadow;
     margin-block-end: clamp(1.5625rem, 1.3864rem + 0.7512vw, 2.0625rem);
     
     &:hover {
-      background-color: variables.$btn-hover;
+      background-color: v.$btn-hover;
     }
   }
 
   &__cancel-btn {
     font-size: rem(15px);
-    font-weight: variables.$card-bold;
-    color: variables.$Gray-600;
+    font-weight: v.$card-bold;
+    color: v.$Gray-600;
     border: none;
     background-color: transparent;
 
     &:hover {
-      color: variables.$Blue-950;
+      color: v.$Blue-950;
     }
   }
 }

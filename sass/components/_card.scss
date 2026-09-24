@@ -92,7 +92,7 @@
 
   &__plan-amount {
     @include c.flex($items: flex-start);
-    gap: rem(4px);
+    gap: rem(4);
 
     p {
       color: v.$Blue-950;
